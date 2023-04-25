@@ -1,3 +1,4 @@
+import Filter from "./containers/filter/Filter";
 import Products from "./containers/products/Products";
 
 const App = () => (
@@ -9,7 +10,10 @@ const App = () => (
     </header>
     <main className="container mx-auto bg-white grow overflow-y-scroll">
       <h2 className="text-2xl text-center font-bold py-4">Products</h2>
-      <Products />
+      <div className="flex gap-8 px-8">
+        <Filter />
+        <Products />
+      </div>
     </main>
   </div>
 );
