@@ -1,6 +1,6 @@
 # Fake Store
 
-Fake store is a user interface for integration with [Fake Store API]<http://fakestoreapi.com>
+Fake store is a user interface for integration with [Fake Store API](http://fakestoreapi.com)
 
 ## Installation
 
