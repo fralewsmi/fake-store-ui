@@ -5,7 +5,7 @@ const Product = ({ title, price, description, image }) => {
     <div className="w-1/2 rounded shadow-lg hover:bg-sky-100">
       <div className="flex">
         <div className="shrink-0">
-          <img class="h-32 w-full object-cover" src={image} alt={title} />
+          <img className="h-32 w-full object-cover" src={image} alt={title} />
         </div>
         <div className="p-4">
           <h3 className="text-sky-600 font-bold">{title}</h3>
