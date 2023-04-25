@@ -19,3 +19,5 @@ npm start
 ## License
 
 [MIT](https://choosealicense.com/licenses/mit/)
+
+[![NodeJS with Webpack](https://github.com/fralewsmi/fake-store-ui/actions/workflows/webpack.yml/badge.svg)](https://github.com/fralewsmi/fake-store-ui/actions/workflows/webpack.yml)
