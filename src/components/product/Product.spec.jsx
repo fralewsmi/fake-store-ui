@@ -6,13 +6,15 @@ test("renders product", () => {
   render(
     <Product
       title="title"
-      price="price"
+      price={100}
       description="description"
       image="image"
     />
   );
   expect(screen.getByRole("heading", { level: 3 })).toHaveTextContent("title");
-  expect(screen.getByRole("heading", { level: 4 })).toHaveTextContent("price");
+  expect(screen.getByRole("heading", { level: 4 })).toHaveTextContent(
+    "$100.00"
+  );
   expect(screen.getByText("description")).toBeDefined();
   expect(screen.getByAltText("title")).toBeDefined();
 });
