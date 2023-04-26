@@ -1,4 +1,4 @@
-import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Filter from "./containers/filter/Filter";
 import Add from "./containers/add/Add";
 import Edit from "./containers/edit/Edit";
@@ -36,7 +36,7 @@ const App = () => {
         </h1>
       </header>
       <main className="container mx-auto bg-white grow overflow-y-scroll">
-        <RouterProvider router={router} />{" "}
+        <RouterProvider router={router} />
       </main>
     </div>
   );

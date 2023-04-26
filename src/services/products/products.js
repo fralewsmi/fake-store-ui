@@ -6,6 +6,12 @@ export const productsApi = createApi({
     baseUrl: "https://fakestoreapi.com/products",
   }),
   endpoints: (builder) => ({
+    addProduct: builder.mutation({
+      query: (body) => ({
+        method: "POST",
+        body,
+      }),
+    }),
     getCategories: builder.query({
       query: () => "/categories",
     }),
@@ -30,6 +36,7 @@ export const productsApi = createApi({
 });
 
 export const {
+  useAddProductMutation,
   useGetCategoriesQuery,
   useGetProductQuery,
   useGetProductsQuery,

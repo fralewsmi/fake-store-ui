@@ -15,7 +15,7 @@ const Product = ({ id, title, price, description, image }) => {
   return (
     <div
       role="button"
-      className="w-full rounded shadow-lg hover:bg-sky-100 cursor-pointer"
+      className="w-full bg-white rounded shadow-lg hover:bg-sky-100 cursor-pointer"
       onClick={onNavigateToEdit}
       onKeyDown={onKeyDown}
       tabIndex="0"
