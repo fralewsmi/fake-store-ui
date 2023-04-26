@@ -14,6 +14,18 @@ npm install
 npm start
 ```
 
+## Built With
+
+Components - [React](https://react.dev/)
+
+Styling - [Tailwind](https://tailwindcss.com/)
+
+State management - [Redux Toolkit](https://redux-toolkit.js.org/)
+
+Routing - [React Router](https://reactrouter.com/en/main)
+
+Testing - [Testing Library](https://testing-library.com/)
+
 ## Contributing
 
 ## License
