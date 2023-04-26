@@ -5,6 +5,7 @@ const Title = ({ value, onChange }) => {
     <div className="flex flex-col py-2 gap-2">
       <label htmlFor="title">Title</label>
       <input
+        id="title"
         type="text"
         name="title"
         value={value || ""}

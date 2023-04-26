@@ -5,6 +5,7 @@ const Category = ({ value, onChange }) => {
     <div className="flex flex-col py-2 gap-2">
       <label htmlFor="category">Category</label>
       <input
+        id="category"
         type="text"
         name="category"
         value={value || ""}

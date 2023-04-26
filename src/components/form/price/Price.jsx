@@ -5,6 +5,7 @@ const Price = ({ value, onChange }) => {
     <div className="flex flex-col py-2 gap-2">
       <label htmlFor="price">Price</label>
       <input
+        id="price"
         type="number"
         name="price"
         value={value || ""}

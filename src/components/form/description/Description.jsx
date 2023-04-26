@@ -5,6 +5,7 @@ const Description = ({ value, onChange }) => {
     <div className="flex flex-col py-2 gap-2">
       <label htmlFor="description">Description</label>
       <textarea
+        id="description"
         name="description"
         value={value || ""}
         onChange={(e) => onChange(e.target.value)}

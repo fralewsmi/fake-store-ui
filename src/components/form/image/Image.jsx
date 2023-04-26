@@ -5,6 +5,7 @@ const Image = ({ value, onChange }) => {
     <div className="flex flex-col py-2 gap-2">
       <label htmlFor="image">Image</label>
       <input
+        id="image"
         type="url"
         name="image"
         value={value || ""}
