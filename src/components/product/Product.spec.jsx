@@ -2,6 +2,10 @@ import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
 import Product from "./Product";
 
+jest.mock("react-router-dom", () => ({
+  useNavigate: () => jest.fn,
+}));
+
 test("renders product", () => {
   render(
     <Product
