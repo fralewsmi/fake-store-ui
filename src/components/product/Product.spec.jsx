@@ -15,6 +15,6 @@ test("renders product", () => {
   expect(screen.getByRole("heading", { level: 4 })).toHaveTextContent(
     "$100.00"
   );
-  expect(screen.getByText("description")).toBeDefined();
-  expect(screen.getByAltText("title")).toBeDefined();
+  expect(screen.getByText("description")).toBeInTheDocument();
+  expect(screen.getByAltText("title")).toBeInTheDocument();
 });

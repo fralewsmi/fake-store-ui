@@ -13,6 +13,7 @@ const Sort = () => {
       <label htmlFor="asc">
         <input
           type="radio"
+          id="asc"
           name="asc"
           value="asc"
           checked={sort === "asc"}
@@ -24,6 +25,7 @@ const Sort = () => {
       <label htmlFor="desc">
         <input
           type="radio"
+          id="desc"
           name="desc"
           value="desc"
           checked={sort === "desc"}
