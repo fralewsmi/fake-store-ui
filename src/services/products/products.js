@@ -6,6 +6,12 @@ export const productsApi = createApi({
     baseUrl: "https://fakestoreapi.com/products",
   }),
   endpoints: (builder) => ({
+    getCategories: builder.query({
+      query: () => "/categories",
+    }),
+    getProduct: builder.query({
+      query: (id) => `/${id}`,
+    }),
     getProducts: builder.query({
       query: ({ category, limit, sort }) => {
         return category
@@ -13,10 +19,19 @@ export const productsApi = createApi({
           : `?limit=${limit}&sort=${sort}`;
       },
     }),
-    getCategories: builder.query({
-      query: () => "/categories",
+    updateProduct: builder.mutation({
+      query: ({ id, ...body }) => ({
+        url: `/${id}`,
+        method: "PUT",
+        body,
+      }),
     }),
   }),
 });
 
-export const { useGetCategoriesQuery, useGetProductsQuery } = productsApi;
+export const {
+  useGetCategoriesQuery,
+  useGetProductQuery,
+  useGetProductsQuery,
+  useUpdateProductMutation,
+} = productsApi;

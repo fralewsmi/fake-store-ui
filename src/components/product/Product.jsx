@@ -1,8 +1,25 @@
 import PropTypes from "prop-types";
+import { useNavigate } from "react-router-dom";
 
-const Product = ({ title, price, description, image }) => {
+const Product = ({ id, title, price, description, image }) => {
+  const navigate = useNavigate();
+  const onNavigateToEdit = () => navigate(`/edit/${id}`);
+
+  const onKeyDown = (e) => {
+    if (e.key === "Enter" || e.key === " ") {
+      e.preventDefault();
+      onNavigateToEdit();
+    }
+  };
+
   return (
-    <div className="w-full rounded shadow-lg hover:bg-sky-100">
+    <div
+      role="button"
+      className="w-full rounded shadow-lg hover:bg-sky-100 cursor-pointer"
+      onClick={onNavigateToEdit}
+      onKeyDown={onKeyDown}
+      tabIndex="0"
+    >
       <div className="flex">
         <div className="flex shrink-0 items-center">
           <img className="h-32 w-full object-cover" src={image} alt={title} />
@@ -23,6 +40,7 @@ const Product = ({ title, price, description, image }) => {
 };
 
 Product.propTypes = {
+  id: PropTypes.number,
   title: PropTypes.string,
   price: PropTypes.number,
   description: PropTypes.string,

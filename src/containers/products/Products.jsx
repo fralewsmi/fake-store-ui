@@ -16,6 +16,7 @@ const Products = () => {
         return (
           <Product
             key={product.id}
+            id={product.id}
             title={product.title}
             price={product.price}
             description={product.description}

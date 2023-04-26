@@ -1,13 +1,13 @@
 import { configureStore } from "@reduxjs/toolkit";
 import { setupListeners } from "@reduxjs/toolkit/query";
+import editReducer from "../features/edit/editSlice";
 import filterReducer from "../features/filter/filterSlice";
-import productsReducer from "../features/products/productsSlice";
 import { productsApi } from "../services/products/products";
 
 export const store = configureStore({
   reducer: {
+    edit: editReducer,
     filter: filterReducer,
-    products: productsReducer,
     [productsApi.reducerPath]: productsApi.reducer,
   },
   middleware: (getDefaultMiddleware) =>
