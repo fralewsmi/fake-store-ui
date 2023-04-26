@@ -1,24 +1,18 @@
-import { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { update } from "../../features/products/productsSlice";
+import { useSelector } from "react-redux";
+import { useGetProductsQuery } from "../../services/products/products";
 import Product from "../../components/product/Product";
 
 const Products = () => {
-  const products = useSelector((state) => state.products.products);
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    fetch("https://fakestoreapi.com/products?limit=5")
-      .then((res) => res.json())
-      .then((products) => dispatch(update(products)));
-    return () => {
-      dispatch(update([]));
-    };
-  }, []);
+  const { category, limit, sort } = useSelector((state) => state.filter);
+  const { data, error, isLoading } = useGetProductsQuery({
+    category,
+    limit,
+    sort,
+  });
 
   return (
     <section className="basis-3/4 flex flex-col items-center gap-4 py-8">
-      {products?.map((product) => {
+      {data?.map((product) => {
         return (
           <Product
             key={product.id}

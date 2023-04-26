@@ -1,8 +1,10 @@
 import { useDispatch, useSelector } from "react-redux";
 import { updateCategory } from "../../features/filter/filterSlice";
+import { useGetCategoriesQuery } from "../../services/products/products";
 
 const Category = () => {
-  const { categories, category } = useSelector((state) => state.filter);
+  const { category } = useSelector((state) => state.filter);
+  const { data, error, isLoading } = useGetCategoriesQuery();
   const dispatch = useDispatch();
 
   return (
@@ -16,7 +18,7 @@ const Category = () => {
         className="form-select"
       >
         <option value="">please select</option>
-        {categories?.map((category) => {
+        {data?.map((category) => {
           return (
             <option key={category} value={category}>
               {category}
