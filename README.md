@@ -11,7 +11,7 @@ npm install
 ## Usage
 
 ```bash
-npm start
+npm run start
 ```
 
 ## Built With
