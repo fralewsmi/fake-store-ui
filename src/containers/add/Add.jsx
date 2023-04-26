@@ -68,6 +68,9 @@ const Add = () => {
         >
           Add product
         </button>
+        <p className="text-amber-500">{result.isLoading && "Loading..."}</p>
+        <p className="text-lime-500">{result.isSuccess && "Success"}</p>
+        <p className="text-rose-500">{result.isError && "Error"}</p>
       </div>
     </div>
   );
